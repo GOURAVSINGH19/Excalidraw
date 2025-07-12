@@ -1,23 +1,15 @@
 {
-  "extends": ["//"],
+  "$schema": "https://turborepo.com/schema.json",
   "tasks": {
     "build": {
-      "dependsOn": ["build:styles", "build:components"]
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
     },
-    "build:styles": {
-      "outputs": ["dist/**"]
-    },
-    "build:components": {
-      "outputs": ["dist/**"]
+    "test": {
+      "outputs": ["coverage/**"],
+      "dependsOn": ["build"]
     },
     "dev": {
-      "with": ["dev:styles", "dev:components"]
-    },
-    "dev:styles": {
-      "cache": false,
-      "persistent": true
-    },
-    "dev:components": {
       "cache": false,
       "persistent": true
     }
