@@ -159,6 +159,9 @@ importers:
       '@prisma/client':
         specifier: ^6.11.1
         version: 6.11.1(prisma@6.11.1)
+      '@types/node':
+        specifier: ^22.15.30
+        version: 22.15.30
       prisma:
         specifier: ^6.11.1
         version: 6.11.1
