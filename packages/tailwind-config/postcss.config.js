@@ -1,6 +1,7 @@
 // Optional PostCSS configuration for applications that need it
-export const postcssConfig = {
+const postcssConfig = {
   plugins: {
     "@tailwindcss/postcss": {},
   },
 };
+module.exports = { postcssConfig };

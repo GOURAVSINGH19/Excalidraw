@@ -1,16 +1,17 @@
 import z from "zod";
 
-export const signupBody = z.object({
-  username: z.string().min(3).max(20),
-  name: z.string(),
-  password: z.string(),
-});
+export const CreateUserSchema = z.object({
+    email: z.string().min(3).max(20),
+    password: z.string(),
+    name: z.string(),
+    photo: z.string()
+})
 
-export const signinBody = z.object({
-  username: z.string().min(3).max(20),
-  password: z.string(),
-});
+export const SigninSchema = z.object({
+    email: z.string().min(3).max(20),
+    password: z.string(),
+})
 
-export const createroom = z.object({
-  name: z.string().min(3).max(20),
-});
+export const CreateRoomSchema = z.object({
+    name: z.string().min(3).max(20),
+})
